@@ -123,7 +123,7 @@
   :L0
   .line 18
     sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
-    const-string v2, "Enter credit card number as a long integer:  "
+    const-string v2, "Veuillez mettre une CC (pas de format PIPE svp):  "
     invoke-virtual { v1, v2 }, Ljava/io/PrintStream;->print(Ljava/lang/String;)V
   .line 19
     invoke-virtual { v0 }, Ljava/util/Scanner;->nextLong()J
@@ -133,7 +133,7 @@
     if-gez v1, :L1
   .line 21
     sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
-    const-string v4, "ERROR! Enter a positive number."
+    const-string v4, "ERROR! Veuillez entrer un nombre positive"
     invoke-virtual { v1, v4 }, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
   :L1
   .line 17
@@ -149,7 +149,7 @@
     invoke-static { v2, v3 }, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
     move-result-object v2
     invoke-direct { v4, v2 }, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-    const-string v2, " is valid"
+    const-string v2, " est valide, et chargable."
     invoke-virtual { v4, v2 }, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
     move-result-object v2
     invoke-virtual { v2 }, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -158,7 +158,7 @@
   :L2
   .line 30
     sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
-    const-string v2, "Want to validate credit card number (y/n)? "
+    const-string v2, "Voulez vous encore continuer (y/n)? "
     invoke-virtual { v1, v2 }, Ljava/io/PrintStream;->print(Ljava/lang/String;)V
   .line 31
     invoke-virtual { v0 }, Ljava/util/Scanner;->next()Ljava/lang/String;
@@ -186,7 +186,7 @@
     invoke-static { v2, v3 }, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
     move-result-object v2
     invoke-direct { v4, v2 }, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-    const-string v2, " is invalid."
+    const-string v2, " non-valide, et non-chargable."
     invoke-virtual { v4, v2 }, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
     move-result-object v2
     invoke-virtual { v2 }, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
